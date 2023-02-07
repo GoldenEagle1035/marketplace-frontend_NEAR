@@ -1,0 +1,66 @@
+@import "../../assets/SCSS/Vars.scss";
+
+#artist-profile {
+	  padding-top: 30px;
+	  padding-bottom: 65px;
+	  @media screen and (max-width: 650px) {
+	    padding-top: 72px;
+	  }
+	overflow-x: hidden;
+	.recently-released {
+		// padding-right: 20px;
+		padding-top: 50px;
+		@media screen and (max-width: 650px){
+			    padding-left: 20px;
+					padding-right: 20px;
+			}
+		.top {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			h2 {
+				font-size: 20px;
+		    font-weight: 300;
+		    line-height: 26px;
+		    color: #ffffff;
+				margin-bottom: 30px;
+			}
+
+			.btn {
+				width: 145px;
+			}
+		}
+
+    .no-results {
+      h4 {
+        color: #fff;
+        text-align: center;
+        font-size: 30px;
+        padding: 30px 300px;
+				@media screen and (max-width: 600px) {
+					padding: 0px 20px;
+					font-weight: 300;
+					font-size: 28px;
+				}
+      }
+    }
+	}
+}
+
+.text-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 65px;
+	text-align: center;
+	color: #ffffff;
+	height: 100%;
+}
+
+.loading{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	place-items: center;
+	height: 100%;
+}

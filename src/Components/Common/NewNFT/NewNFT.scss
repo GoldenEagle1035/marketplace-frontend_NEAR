@@ -1,0 +1,300 @@
+@import "../../../assets/SCSS/Vars.scss";
+#new-nft-modal {
+    font-family: "Space Grotesk", sans-serif;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+		.cover {}
+
+		.holder {
+			padding: 30px;
+			h3 {
+			margin: 0px;
+	    font-style: normal;
+	    font-weight: 300;
+	    font-size: 24px;
+	    line-height: 31px;
+			}
+			p {
+				font-style: normal;
+				font-weight: 300;
+				font-size: 16px;
+				line-height: 20px;
+				margin: 0 0 20px 0;
+				opacity: 0.8;
+			}
+	}
+	.single-song {
+		.drag {
+			color: #000;
+		}
+		.left {
+			.track {
+				color: #000;
+				justify-content: space-between;
+			}
+		}
+	}
+	.holder {
+		overflow-x: scroll;
+		.error {
+			color: $red;
+		}
+		width: 755px;
+		.split {
+			display: flex;
+			margin-bottom: 20px;
+			// max-height: 250px;
+			overflow-y: auto;
+			// border-radius: 10px;
+			padding-right: 10px;
+			&#style-4::-webkit-scrollbar-track {
+				box-shadow: inset 0 0 6px #c4c4c4;
+				background-color: #f5f5f5;
+				border-radius: 10px;
+			}
+
+			&#style-4::-webkit-scrollbar {
+				width: 10px;
+				background-color: #f5f5f5;
+			}
+
+			&#style-4::-webkit-scrollbar-thumb {
+				background-color: #c4c4c4;
+				border: 2px solid #c4c4c4;
+				border-radius: 10px;
+			}
+			.left {
+				flex: 1;
+			}
+
+			.right {
+				padding-left: 20px;
+				.image-upload {
+					width: 160px;
+					height: 160px;
+					overflow: hidden;
+					background: #ececec;
+					border-radius: 8px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	.close-icon {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		z-index: 999;
+		cursor: pointer;
+	}
+	.song-list {
+    max-height: 220px;
+    overflow-y: auto;
+		ul {
+			padding-left: 0px;
+		}
+	}
+
+	.uploader {
+		margin-top: 20px;
+		.upload-dropzone {
+			cursor: pointer;
+			border: 2px solid #000000;
+			border-radius: 8px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 20px;
+			height: 110px;
+      &.disabled {
+        background: #dedede;
+      }
+			h5,
+			p {
+				margin: 0px;
+				font-style: normal;
+				font-weight: normal;
+			}
+
+			h5 {
+				font-size: 16px;
+			}
+
+			p {
+				font-size: 14px;
+			}
+
+			img {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+h3 {
+	margin-top: 0px;
+}
+.policy-wrap {
+	width: fit-content;
+	margin: 0 auto;
+}
+.album-uploader {
+	margin-top: 5px;
+	display: flex;
+	flex-direction: row;
+	color: black;
+	align-items: center;
+	justify-content: space-between;
+	.upload-progress {
+		background: #FA7C05;
+		height: 5px;
+	}
+}
+.input-holder {
+	margin-bottom: 10px;
+	text-align: left;
+	&:last-child {
+		margin-bottom: 0px;
+	}
+	display: flex;
+	flex-direction: column;
+	.upload-holder {
+		margin-top: 5px;
+		display: flex;
+		flex-direction: row;
+		color: black;
+		align-items: center;
+		justify-content: space-between;
+		.upload-progress {
+			background: blue;
+			height: 5px;
+		}
+	}
+	input,
+	textarea {
+		font-family: $space;
+		border: 1.5px solid #E3E3E3;
+		border-radius: 8px;
+		font-size: 16px;
+		color: #999999;
+		padding: 10px 20px;
+		width: 100%;
+		box-sizing: border-box;
+		&[type="submit"] {
+			background: #000000;
+			color: #fff;
+			border: 1px solid #000000;
+			box-sizing: border-box;
+			border-radius: 100px;
+			width: initial;
+			min-width: 300px;
+			margin-top: 20px;
+		}
+
+		&[type="checkbox"] {
+			min-width: initial;
+			width: initial;
+			margin-right: 10px;
+		}
+	}
+	input:focus{
+		border: 1.5px solid #000;
+	}
+
+	&.checkbox {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		justify-content: flex-end;
+	}
+}
+
+// @media screen and (min-width: 900px) {
+//   .split {
+//     background: red;
+//     &body {
+//       overflow: hidden;
+//     }
+//   }
+// }
+
+.draggable-item,
+.sortableHelper {
+	z-index: 99999;
+}
+
+.drag {
+	cursor: grab;
+	margin-right: 8px;
+}
+
+.single-song {
+	display: flex;
+	margin-bottom: 20px;
+	align-items: center;
+	&:last-child {
+		margin-bottom: 0px;
+	}
+	.left {
+		flex: none;
+		.track {
+			border: 2px solid #000000;
+			border-radius: 8px;
+			padding: 10px 28px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			width: 250px;
+			img {
+				margin-left: 6px;
+			}
+		}
+	}
+
+	.right {
+		flex: 1;
+	}
+
+	.trash {
+		display: flex;
+		margin-left: 8px;
+		img {
+			cursor: pointer;
+		}
+	}
+}
+
+.crop-modal {
+  position: absolute;
+  z-index: 9991;
+  background: #fff;
+  padding: 40px;
+  max-height: 90%;
+  max-width: 90%;
+  .bottom {
+    text-align: center;
+    padding-top: 20px;
+  }
+}
+
+.crop-cover {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.9);
+  z-index: 999;
+}

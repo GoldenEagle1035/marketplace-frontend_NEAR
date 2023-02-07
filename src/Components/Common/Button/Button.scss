@@ -1,0 +1,28 @@
+@import "../../../assets/SCSS/Vars.scss";
+.btn {
+  background: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 100px;
+  font-family: $lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #000000;
+  padding: 14px;
+  cursor: pointer;
+  &.outlined {
+    background: transparent;
+    color: #fff;
+  }
+
+  &.black-outline {
+    border: 1px solid #000;
+  }
+
+  &.solid-black {
+    background: #000;
+    color: #fff;
+    border: 2px solid #000;
+  }
+}

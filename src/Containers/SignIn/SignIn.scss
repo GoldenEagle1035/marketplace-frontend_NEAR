@@ -1,0 +1,24 @@
+.sign-in-contain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-weight: bold;
+    font-size: 40px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin-top: 150px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    .btn {
+      width: 369px;
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
